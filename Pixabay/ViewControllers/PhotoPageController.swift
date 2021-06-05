@@ -21,6 +21,7 @@ class PhotoPageController: UIPageViewController, UIPageViewControllerDataSource,
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "back", style: .plain, target: self, action: #selector(back))
         navigationController?.navigationBar.barTintColor = UIColor(hex: "#062D4B")
+        navigationController?.navigationBar.backgroundColor = .clear
         
         guard let results = results else { return }
     

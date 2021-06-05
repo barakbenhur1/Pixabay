@@ -62,8 +62,7 @@ class SearchViewController: UIViewController {
     private func setupSearchButton() -> UIButton {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
         button.setTitle("Search", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.setTitleColor(.darkGray, for: .selected)
+        button.setTitleColor(.black, for: .normal)
         button.addTarget(self, action: #selector(searchTapped), for: .touchUpInside)
         
         return button
