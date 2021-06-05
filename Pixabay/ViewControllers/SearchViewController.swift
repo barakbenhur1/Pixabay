@@ -69,8 +69,8 @@ class SearchViewController: UIViewController {
     }
     
     private func setupSearchField() -> UIView {
-        let wrapper = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 40))
-        let searchField = UITextField(frame: CGRect(x: 0, y: 0, width: 300, height: 40))
+        let wrapper = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width * 0.74, height: 40))
+        let searchField = UITextField(frame: CGRect(x: 0, y: 0, width: wrapper.frame.width - 20, height: 40))
         self.searchField = searchField
         searchField.tintColor = .black
         searchField.placeholder = "Search"

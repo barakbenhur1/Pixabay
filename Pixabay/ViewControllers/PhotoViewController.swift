@@ -25,7 +25,13 @@ class PhotoViewController: UIViewController {
     }
     
     private func setImage(image: String) {
+        let loading = UIActivityIndicatorView()
+        loading.frame = view.frame
+        view.addSubview(loading)
+        loading.hidesWhenStopped = true
+        loading.startAnimating()
         self.photoView.kf.setImage(with: URL(string: image), placeholder: nil, options: nil) { (image) in
+            loading.stopAnimating()
         }
     }
 }
