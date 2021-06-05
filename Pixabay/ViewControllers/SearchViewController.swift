@@ -122,6 +122,10 @@ extension SearchViewController: UICollectionViewDataSource {
         myCell.layer.borderColor = UIColor.black.cgColor
         myCell.layer.borderWidth = 2
         myCell.layer.cornerRadius = 10
+      
+        myCell.image.layer.cornerRadius = 10
+      
+        myCell.text.layer.cornerRadius = 10
         
         return myCell
     }
