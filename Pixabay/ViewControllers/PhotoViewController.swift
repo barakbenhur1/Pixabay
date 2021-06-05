@@ -9,13 +9,19 @@ import UIKit
 import Kingfisher
 
 class PhotoViewController: UIViewController {
-    @IBOutlet weak var photoView: UIImageView!
-    
-    var image: String = ""
-    
+    private lazy var photoView: UIImageView = UIImageView(frame: view.frame)
+    var image: String!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
+        photoView.contentMode = .scaleAspectFit
         setImage(image: image)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        view.addSubview(photoView)
     }
     
     private func setImage(image: String) {

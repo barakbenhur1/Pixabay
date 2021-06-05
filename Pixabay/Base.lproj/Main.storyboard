@@ -44,7 +44,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="prA-BK-Ys1">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
-                                <color key="backgroundColor" red="0.38268166209999999" green="0.38431372549999998" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.023529411764705882" green="0.68627450980392157" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="110" id="Af0-qX-Gp9"/>
@@ -65,35 +65,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-436.23188405797106" y="-8.0357142857142847"/>
-        </scene>
-        <!--Photo View Controller-->
-        <scene sceneID="HDF-3V-238">
-            <objects>
-                <viewController storyboardIdentifier="PhotoViewController" id="jOA-aI-Mt6" customClass="PhotoViewController" customModule="Pixabay" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="IWu-It-s0S">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mk8-OV-382">
-                                <rect key="frame" x="0.0" y="97.5" width="414" height="771"/>
-                            </imageView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="aed-jS-oJa"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="mk8-OV-382" firstAttribute="width" secondItem="IWu-It-s0S" secondAttribute="width" id="U9m-ra-NEg"/>
-                            <constraint firstItem="mk8-OV-382" firstAttribute="centerY" secondItem="aed-jS-oJa" secondAttribute="centerY" constant="30" id="bxt-Qo-AFV"/>
-                            <constraint firstItem="mk8-OV-382" firstAttribute="centerX" secondItem="aed-jS-oJa" secondAttribute="centerX" id="etO-3b-3cK"/>
-                            <constraint firstItem="mk8-OV-382" firstAttribute="height" secondItem="IWu-It-s0S" secondAttribute="height" multiplier="0.86" id="mX3-ls-jYb"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="photoView" destination="mk8-OV-382" id="pee-ra-utf"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QCG-Un-WQC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="644" y="-12"/>
         </scene>
     </scenes>
     <resources>

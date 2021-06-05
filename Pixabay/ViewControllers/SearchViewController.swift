@@ -32,12 +32,12 @@ class SearchViewController: UIViewController {
     }
     
     private func setupNavBar() {
-        self.navigationController?.navigationBar.backgroundColor = .clear
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationItem.largeTitleDisplayMode = .automatic
+        navigationController?.navigationBar.backgroundColor = .clear
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.largeTitleDisplayMode = .automatic
         
         let searchView = setupSearchField()
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: searchView)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: searchView)
         
         let searchButton = setupSearchButton()
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: searchButton)
@@ -51,7 +51,7 @@ class SearchViewController: UIViewController {
         collectionView = UICollectionView(frame: CGRect(x: 0, y: self.navigationController?.navigationBar.frame.height ?? 100, width: view.frame.width, height: view.frame.height - 100), collectionViewLayout: layout)
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.register(SearchResultCollectionViewCell.self, forCellWithReuseIdentifier: "\(SearchResultCollectionViewCell.self)")
+        collectionView.register(UINib(nibName: "SearchResultCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "\(SearchResultCollectionViewCell.self)")
         collectionView.backgroundColor = UIColor.white
         
         (collectionView as? UIScrollView)?.delegate = self
@@ -116,7 +116,13 @@ extension SearchViewController: UICollectionViewDataSource {
         guard let results = results, let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(SearchResultCollectionViewCell.self)", for: indexPath) as? SearchResultCollectionViewCell else { return SearchResultCollectionViewCell() }
         let index = indexPath.row
         myCell.backgroundColor = .clear
-        myCell.set(image: results[index].image, text: results[index].text)
+        let title = results[index].text
+        let photo = results[index].image
+        myCell.set(image: photo, text: title)
+        
+        myCell.layer.borderColor = UIColor.black.cgColor
+        myCell.layer.borderWidth = 2
+        myCell.layer.cornerRadius = 10
         
         return myCell
     }
@@ -127,12 +133,10 @@ extension SearchViewController : UICollectionViewDelegate {
         let photoViewController = PhotoPageController()
         photoViewController.results = results
         photoViewController.startIndex = indexPath.row
-        photoViewController.modalPresentationStyle = .automatic
        
         let navigationController = UINavigationController(rootViewController: photoViewController)
-        navigationController.modalPresentationStyle = .popover
+        navigationController.modalPresentationStyle = .fullScreen
         self.present(navigationController, animated: true, completion: nil)
-//        navigationController?.pushViewController(photoViewController, animated: true)
     }
 }
 
@@ -142,14 +146,14 @@ extension SearchViewController : UIScrollViewDelegate {
         let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
         if (maximumOffset - contentOffset <= -30) {
             guard isReloadMore, results?.isEmpty == false, let text = searchField.text else { return }
-            collectionView.isUserInteractionEnabled = false
+//            collectionView.isUserInteractionEnabled = false
             isReloadMore = false
             presenter.search(text: text, new: false)
         }
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        collectionView.isUserInteractionEnabled = true
+//        collectionView.isUserInteractionEnabled = true
         isReloadMore = true
     }
 }

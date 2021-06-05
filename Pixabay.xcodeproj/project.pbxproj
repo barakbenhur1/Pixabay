@@ -24,6 +24,8 @@
 		B6ECE9AC266C0138008BF0C4 /* SearchResultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ECE9AB266C0138008BF0C4 /* SearchResultCollectionViewCell.swift */; };
 		B6ECE9B1266C1376008BF0C4 /* PhotoPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ECE9B0266C1376008BF0C4 /* PhotoPageController.swift */; };
 		B6ECE9B6266C142B008BF0C4 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ECE9B5266C142B008BF0C4 /* PhotoViewController.swift */; };
+		B6ECE9D0266C2E38008BF0C4 /* SearchResultCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6ECE9CF266C2E38008BF0C4 /* SearchResultCollectionViewCell.xib */; };
+		B6ECE9D5266C3601008BF0C4 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ECE9D4266C3601008BF0C4 /* UIColor+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		B6ECE9AB266C0138008BF0C4 /* SearchResultCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCollectionViewCell.swift; sourceTree = "<group>"; };
 		B6ECE9B0266C1376008BF0C4 /* PhotoPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPageController.swift; sourceTree = "<group>"; };
 		B6ECE9B5266C142B008BF0C4 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		B6ECE9CF266C2E38008BF0C4 /* SearchResultCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCollectionViewCell.xib; sourceTree = "<group>"; };
+		B6ECE9D4266C3601008BF0C4 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		DEB4B6330F0CB8CEDE9D37D9 /* Pods-PixabayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PixabayTests.debug.xcconfig"; path = "Target Support Files/Pods-PixabayTests/Pods-PixabayTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E8D1FF7CFAB32DBEAE0331E0 /* Pods-Pixabay-PixabayUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pixabay-PixabayUITests.release.xcconfig"; path = "Target Support Files/Pods-Pixabay-PixabayUITests/Pods-Pixabay-PixabayUITests.release.xcconfig"; sourceTree = "<group>"; };
 		ECB3C2B2B3E384058C4ECED3 /* Pods_Pixabay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pixabay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,6 +165,7 @@
 				B6200174266BC553008B98B8 /* LaunchScreen.storyboard */,
 				B6200177266BC553008B98B8 /* Info.plist */,
 				B620016F266BC550008B98B8 /* Pixabay.xcdatamodeld */,
+				B6ECE9D4266C3601008BF0C4 /* UIColor+Ext.swift */,
 			);
 			path = Pixabay;
 			sourceTree = "<group>";
@@ -197,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				B6ECE9AB266C0138008BF0C4 /* SearchResultCollectionViewCell.swift */,
+				B6ECE9CF266C2E38008BF0C4 /* SearchResultCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -321,6 +327,7 @@
 				B6200176266BC553008B98B8 /* LaunchScreen.storyboard in Resources */,
 				B6200173266BC553008B98B8 /* Assets.xcassets in Resources */,
 				B620016E266BC550008B98B8 /* Main.storyboard in Resources */,
+				B6ECE9D0266C2E38008BF0C4 /* SearchResultCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +462,7 @@
 				B6ECE9AC266C0138008BF0C4 /* SearchResultCollectionViewCell.swift in Sources */,
 				B6ECE9B6266C142B008BF0C4 /* PhotoViewController.swift in Sources */,
 				B6200171266BC550008B98B8 /* Pixabay.xcdatamodeld in Sources */,
+				B6ECE9D5266C3601008BF0C4 /* UIColor+Ext.swift in Sources */,
 				B6200169266BC550008B98B8 /* SceneDelegate.swift in Sources */,
 				B6ECE9B1266C1376008BF0C4 /* PhotoPageController.swift in Sources */,
 			);

@@ -19,13 +19,13 @@ class PhotoPageController: UIPageViewController, UIPageViewControllerDataSource,
         self.delegate = self
         self.dataSource = self
         
-        navigationController?.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "back", style: .plain, target: self, action: #selector(back))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "back", style: .plain, target: self, action: #selector(back))
+        navigationController?.navigationBar.barTintColor = UIColor(hex: "#062D4B")
         
         guard let results = results else { return }
     
         for result in results {
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            guard let vc: PhotoViewController = storyBoard.instantiateViewController(withIdentifier: "PhotoViewController") as? PhotoViewController else { continue }
+            let vc = PhotoViewController()
             vc.image = result.image
             pages.append(vc)
         }
