@@ -46,7 +46,7 @@ class SearchViewController: UIViewController {
     private func setupCollectionView() {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 30, right: 10)
-        layout.itemSize = CGSize(width: 120, height: 120)
+        layout.itemSize = CGSize(width: view.frame.width / 3.8, height: view.frame.width / 3.8)
         
         collectionView = UICollectionView(frame: CGRect(x: 0, y: self.navigationController?.navigationBar.frame.height ?? 100, width: view.frame.width, height: view.frame.height - 100), collectionViewLayout: layout)
         collectionView.dataSource = self
